@@ -191,6 +191,7 @@ export default function ExclusiveChatApp() {
               <select
                 value={selectedUsername}
                 onChange={(e) => setSelectedUsername(e.target.value)}
+                style={{ height: '60px' }}
                 className="w-full rounded-2xl bg-white/10 px-4 py-3 text-white border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
               >
                 {ALLOWED_USERNAMES.map((u) => (
@@ -222,13 +223,26 @@ export default function ExclusiveChatApp() {
       {/* Chat shell (rounded like the screenshot) */}
       <div className="relative w-full max-w-[420px] md:max-w-[720px] lg:max-w-[880px] bg-[#5B46F6] rounded-[36px] shadow-2xl border border-white/10 overflow-hidden">
         {/* Header */}
-        <div className="px-4 md:px-6 py-4 md:py-5 flex items-center justify-between">
+        <div className="px-4 md:px-6 py-4 bg-[#000] md:py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden">
-              {/* avatar placeholder */}
-              <div className="h-full w-full bg-white/20" />
+          <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden">
+              {selectedUsername === "Umer" ? (<img 
+                src="https://avatar.iran.liara.run/public/boy"  // path to your local image in the public folder
+                alt="User avatar"
+                className="h-full w-full object-cover"
+              />) : (<img 
+                src="https://avatar.iran.liara.run/public"  // path to your local image in the public folder
+                alt="User avatar"
+                className="h-full w-full object-cover"
+              />)}
+              <img 
+                src="https://avatar.iran.liara.run/public/boy"  // path to your local image in the public folder
+                alt="User avatar"
+                className="h-full w-full object-cover"
+              />
               <span className="absolute right-0 bottom-0 h-3 w-3 rounded-full bg-green-400 ring-2 ring-[#5B46F6]" />
             </div>
+
             <div className="text-white">
               <p className="font-semibold leading-tight">{selectedUsername}</p>
               <p className="text-xs opacity-80">-</p>
