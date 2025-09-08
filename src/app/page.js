@@ -23,7 +23,7 @@ const STICKERS = [
   '🎉','🎊','🥳','🎈','👑','💎','💐','🍀','🦄',
 ];
 
-const ALLOWED_USERNAMES = ['Person 1', 'Person 2'];
+const ALLOWED_USERNAMES = ['Sophie', 'Umer'];
 const USER_STORAGE_KEY = 'exclusivechat.username';
 
 export default function ExclusiveChatApp() {
@@ -182,7 +182,7 @@ export default function ExclusiveChatApp() {
             <div className="mx-auto h-20 w-20 rounded-full bg-white/20 grid place-items-center">
               <Lock className="text-white/90 h-8 w-8" />
             </div>
-            <h1 className="text-white text-3xl font-semibold">Private Chat</h1>
+            <h1 className="text-white text-3xl font-semibold">Welcome.</h1>
             <p className="text-white/70 text-sm">Enter the secret password to continue</p>
           </div>
           <form onSubmit={handleLogin} className="space-y-5">
@@ -218,7 +218,7 @@ export default function ExclusiveChatApp() {
   }
 
   return (
-    <div className="min-h-screen bg-[#5B46F6] flex items-center justify-center px-2 md:px-6 py-4">
+    <div className="min-h-screen bg-[#ddd9fc] flex items-center justify-center px-2 md:px-6 py-4">
       {/* Chat shell (rounded like the screenshot) */}
       <div className="relative w-full max-w-[420px] md:max-w-[720px] lg:max-w-[880px] bg-[#5B46F6] rounded-[36px] shadow-2xl border border-white/10 overflow-hidden">
         {/* Header */}
@@ -235,18 +235,7 @@ export default function ExclusiveChatApp() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              className="h-10 w-10 rounded-full border border-white/20 bg-white/10 grid place-items-center hover:bg-white/20 transition"
-              title="Video call"
-            >
-              <Video className="h-5 w-5 text-white" />
-            </button>
-            <button
-              className="h-10 w-10 rounded-full border border-white/20 bg-white/10 grid place-items-center hover:bg-white/20 transition"
-              title="Voice call"
-            >
-              <Phone className="h-5 w-5 text-white" />
-            </button>
+            
             <button
               onClick={clearAllMessages}
               className="h-10 w-10 rounded-full border border-white/20 bg-red-500/20 grid place-items-center hover:bg-red-500/30 transition"
