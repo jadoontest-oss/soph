@@ -178,11 +178,12 @@ export default function ExclusiveChatApp() {
       <div className="min-h-screen bg-gradient-to-br from-[#6B4CF6] via-[#7A56FF] to-[#9A65FF] flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative w-full max-w-md rounded-[28px] border border-white/15 bg-white/10 p-8 backdrop-blur-xl shadow-2xl">
-          <div className="text-center mb-8 space-y-2">
-            <div className="mx-auto h-20 w-20 rounded-full bg-white/20 grid place-items-center">
-              <Lock className="text-white/90 h-8 w-8" />
+          <div className="text-center mb-8 space-y-2 items-center">
+          <div className="mx-auto h-20 w-20 rounded-full bg-white/20 grid place-items-center">
+            <img src='https://upload.wikimedia.org/wikipedia/commons/2/28/Patrick_Star_character.png' style={{ width: '80px', height: '80px' ,alignSelf: 'center', alignContent: 'center', alignItems: 'center' }} />
             </div>
-            <h1 className="text-white text-3xl font-semibold">Welcome.</h1>
+            <h1 className="text-white text-3xl font-semibold">Welcome.</h1> 
+            
             <p className="text-white/70 text-sm">Enter the secret password to continue</p>
           </div>
           <form onSubmit={handleLogin} className="space-y-5">
